@@ -1,0 +1,288 @@
+.planner-page {
+  height: calc(100vh - 56px);
+  background: #0a0f1e;
+  overflow: hidden;
+}
+
+.planner-layout {
+  display: flex;
+  height: 100%;
+}
+
+.planner-panel {
+  width: 380px;
+  min-width: 380px;
+  background: #0f172a;
+  border-right: 1px solid #1e293b;
+  overflow-y: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0 0 4px;
+}
+
+.page-subtitle {
+  color: #64748b;
+  font-size: 13px;
+  margin: 0 0 20px;
+}
+
+.planner-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.form-select {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #e2e8f0;
+  padding: 10px 12px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.form-error {
+  color: #f87171;
+  font-size: 13px;
+  margin: 0;
+}
+
+.submit-btn {
+  background: #1d4ed8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  width: 100%;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.loading-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Result card */
+.result-card {
+  background: #1e293b;
+  border: 1px solid #2d3f55;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-route-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+.result-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.metric {
+  background: #0f172a;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #64748b;
+}
+
+.metric-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+.metric-unit {
+  font-size: 12px;
+  font-weight: 400;
+  color: #64748b;
+}
+
+.result-reasoning {
+  border-top: 1px solid #334155;
+  padding-top: 14px;
+}
+
+.reasoning-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #64748b;
+  margin: 0 0 8px;
+}
+
+.reasoning-text {
+  font-size: 13px;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.result-disruptions {
+  border-top: 1px solid #334155;
+  padding-top: 14px;
+}
+
+.considered-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.considered-desc {
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+.result-alternatives {
+  border-top: 1px solid #334155;
+  padding-top: 14px;
+}
+
+.alt-route {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background: #0f172a;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+
+.alt-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.alt-meta {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.agent-reports {
+  border-top: 1px solid #334155;
+  padding-top: 14px;
+}
+
+.agent-reports-summary {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.agent-report-item {
+  margin-top: 10px;
+  padding: 8px 10px;
+  background: #0f172a;
+  border-radius: 6px;
+}
+
+.agent-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+.agent-score {
+  font-size: 11px;
+  color: #64748b;
+  margin-left: 8px;
+}
+
+.agent-summary {
+  font-size: 12px;
+  color: #94a3b8;
+  margin: 4px 0 0;
+}
+
+.planner-map {
+  flex: 1;
+  position: relative;
+}
